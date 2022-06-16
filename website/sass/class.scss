@@ -1,0 +1,101 @@
+// Container
+
+
+
+
+
+// Form
+.divForm{
+    form{
+        input{
+            width: 100%;
+            font-size: $fontsize_14;
+            box-sizing: border-box;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            padding: 8px 10px;
+            
+            &::placeholder{
+                font-size: $fontsize_14;
+            }
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        button{
+
+        }
+
+
+
+        .divForm_options{
+            margin-top: 10px;
+            .divForm_options_rememberMe{
+                display: flex;
+                align-items: center;
+
+                input{
+                    display: none;
+                }
+
+                label{
+                    width: 11px;
+                    height: 11px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #fff;
+                    border-radius: 2px;
+                    margin: 0px 5px 0 0;
+                    position: relative;
+
+                    &::after{
+                        content: "";
+                        width: 7px;
+                        height: 7px;
+                        background-color: #fff;
+                        box-shadow: inset 1em 1em var(--form-control-color);
+                        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+                        transition: 120ms transform ease-in-out;
+                        transform-origin: bottom left;
+                        transform: scale(0);
+                        
+                    }
+                }
+
+                input:checked ~ label{
+                    background-color: $green;
+
+                    &::after{
+                        transform: scale(1);
+                    }
+                }
+
+                p{
+                    color: #fff;
+                    font-size: $fontsize_small;
+                }
+            }
+
+            .divForm_options_forgotPassword{
+                color: #fff;
+                font-size: $fontsize_small;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+
+
+
+// Button
+.primaryBtn{
+    font-size: $fontsize_14;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 6px 12px;
+}

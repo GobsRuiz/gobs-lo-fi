@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "sass_login":"sass --watch sass/style_login.scss css/style_login.css --style compressed",
+        "sass_index":"sass --watch sass/style_index.scss css/style_index.css --style compressed"
+    }
+}
