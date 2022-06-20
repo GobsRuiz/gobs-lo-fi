@@ -5,6 +5,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 
 // Routes
+const routerSinger = require("./routes/singer");
 
 
 // Others
@@ -29,6 +30,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Routes
+app.use("/singer", routerSinger);
 
 // Error
 app.use((req, res, next) => {
